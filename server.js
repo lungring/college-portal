@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 // Initialize the Google Gen AI client with your active key
-const ai = new GoogleGenAI({});
+const ai = new GoogleGenAI({apiKey: process.env.GEMINI_API_KEY});
 
 // Middleware to parse incoming JSON payloads
 app.use(express.json());
